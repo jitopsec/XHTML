@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>Auto complete</title>
+
+  <script type="text/javascript" src="scripts/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+  <script type="text/javascript" src="scripts/yui/build/animation/animation.js"></script>
+  <script type="text/javascript" src="scripts/yui/build/autocomplete/autocomplete.js"></script>
+
+</head>
+
+<body>
+
+Select a US state:
+	<input id="statesinput" type="text">
+	<div id="statescontainer"></div>
+
+
+<script type="text/javascript">
+YAHOO.example.statesArray = [
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Dakota",
+    "North Carolina",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+];
+
+</script>
+
+
+<script type="text/javascript">
+YAHOO.example.ACJSArray = new function() {
+    // Instantiate first JS Array DataSource
+    this.oACDS = new YAHOO.widget.DS_JSArray(YAHOO.example.statesArray);
+
+    // Instantiate first AutoComplete
+    this.oAutoComp = new YAHOO.widget.AutoComplete('statesinput','statescontainer', this.oACDS);
+    this.oAutoComp.prehighlightClassName = "yui-ac-prehighlight";
+    this.oAutoComp.typeAhead = true;
+    this.oAutoComp.useShadow = true;
+    this.oAutoComp.minQueryLength = 0;
+    this.oAutoComp.textboxFocusEvent.subscribe(function(){
+        var sInputValue = YAHOO.util.Dom.get('statesinput').value;
+        if(sInputValue.length === 0) {
+            var oSelf = this;
+            setTimeout(function(){oSelf.sendQuery(sInputValue);},0);
+        }
+    });
+    
+};
+</script>
+
+</body>
+</html>

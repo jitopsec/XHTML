@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Form validation</title>
+  <script type="text/JavaScript" language="JavaScript">
+
+function validate(form) {
+  var returnValue=true;
+
+  var formElements = form.elements;
+  for (var i=0; i<formElements.length; i++)
+   {
+     currentElement=formElements[i];
+      if (currentElement.value=="" && currentElement.className=="required")
+     {
+       alert("The required field \" "+currentElement.name+"\" is empty. Please provide a value for it.");
+       currentElement.focus();
+       returnValue = false;
+      break;
+      }
+  }
+  return returnValue;
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="forms.css" />
+</head>
+<body>
+
+<form name="frmEnquiry" method="post" action="register.aspx" 
+      onsubmit="return validate(this);">
+
+  <div class="label"><label for="Name">Name:</div>
+  <div class="formElement"><input type="text" class="required" name="Name" id="Name" size="12" /></div>
+  <div class="clear"></div>
+
+  <div class="label"><label for="E-mail">E-mail:</div>
+  <div class="formElement"><input type="text" class="required" name="E-mail" id="Email" size="12" /></div>
+  <div class="clear"></div>
+
+  <div class="label"><label for="txtEmail">Please enter your query here:</div>
+  <div class="formElement"><textarea rows="8" class="required" cols="30" name="Query" id="Query"></textarea></div>
+  <div class="clear"></div>
+
+  <div class="label"><label for="txtEmail">&nbsp;</div>
+  <div class="formElement"><input type="submit" class="" value="Submit your query" /></div>
+
+</form>
+
+</body>
+</html>

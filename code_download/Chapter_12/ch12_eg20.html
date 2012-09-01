@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Scriptaculous animation effects</title>
+  <script src="scripts/scriptaculous/lib/prototype.js" type="text/javascript"></script>
+  <script src="scripts/scriptaculous/src/scriptaculous.js" type="text/javascript"></script></head>
+  <style type="text/css">
+    .demo {border:1px solid #333333; background-color:#d6d6d6; width:150px; height:100px; padding:10px; font-family:arial, verdana, sans-serif;}
+    .container {width:200px; height:150px;margin:20px;float:left;}
+    .clear {clear:both;}
+  </style>
+<body>
+
+<div class="container">
+  <div class="demo" id="demo-effect-shake" onclick="new Effect.Shake(this)">
+    Effect.Shake
+  </div>
+</div>
+
+<div class="container">
+  <div class="demo" id="demo-effect-shrink" onclick="new Effect.Shrink(this); window.setTimeout('Effect.Appear(\'demo-effect-shrink\', {duration:.3})',2500);">
+    Effect.Shrink
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="container">
+  <div class="demo" id="demo-effect-fade" onclick="new Effect.Fade(this); window.setTimeout('Effect.Appear(\'demo-effect-fade\', {duration:.3})',2500);">
+    Effect.Fade
+  </div>
+</div>
+
+<div class="container">
+  <div class="demo" id="demo-effect-puff" onclick="new Effect.Puff(this); window.setTimeout('Effect.Appear(\'demo-effect-puff\', {duration:.3})',2500);">
+    Effect.Puff
+  </div>
+</div>
+
+</body>
+</html>
