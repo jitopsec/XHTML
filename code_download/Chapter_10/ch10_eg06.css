@@ -1,0 +1,10 @@
+body {
+  background-color:#ffffff;
+  font-family:arial, verdana, sans-serif; font-size:12px;}
+
+.page {width:700px;}
+.navigation {
+  background-image:url(images/backdrop.gif);
+  background-repeat:repeat-x;}
+
+a img {border:none;}

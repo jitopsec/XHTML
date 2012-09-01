@@ -1,0 +1,25 @@
+body {
+  background-color:#ffffff;
+  font-family:arial, verdana, sans-serif; font-size:12px;}
+
+.page {
+  width:700px;
+  margin:10px;
+  padding:10px;
+  border:1px solid #000000;}
+
+.navigation {
+  background-color:#d6d6d6;
+  padding:5px;
+  margin-bottom:20px;}
+
+.navigation a {margin:0px 10px 0px 10px;}
+
+img {
+  margin-right:10px; 
+  border: 1px solid #000000;}
+
+.transport {background-color:#d6d6d6;}
+.duration {background-color:#e6e6e6;}
+.description {background-color:#f2f2f2;}
+td {padding:5px;}

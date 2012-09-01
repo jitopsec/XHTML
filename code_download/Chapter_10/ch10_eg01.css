@@ -1,0 +1,9 @@
+body {
+  background-color:#ffffff;
+  font-family:arial, verdana, sans-serif; font-size:12px;}
+
+.page {
+  width:700px;
+  border:1px solid #000000;}
+
+td {vertical-align:top;}

@@ -1,0 +1,15 @@
+<html>
+<head><title>The replace() method</title></head>
+<body>
+<p>Replacing character strings:</p>
+
+<form name="myForm">
+
+  <textarea name="myTextArea" id="myTextArea" cols="40" rows="10">I am interested in Curl, here is a url for it.</textarea><br /><br />
+
+  <input type="button" value="Replace characters URL" onclick="document.myForm.myTextArea.value =document.myForm.myTextArea.value.replace(/\burl\b/gi, 'abc');">
+
+</form>
+
+</body>
+</html>

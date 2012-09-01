@@ -1,0 +1,30 @@
+body {
+  color:#000000;
+  background-color:#efefef;
+  font-family:arial, verdana, sans-serif;}
+
+.page {
+  width:980px;
+  border:1px solid #000000;
+  background-image:url(images/3columnbackground.gif);
+  background-repeat:repeat-y;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0px;
+  padding:0px;}
+
+.header {background-color:#ffffff;}
+
+.nav {
+  float:left;
+  width:100px;}
+
+.content {
+  float:left;
+  width:600px;}
+
+.right {
+  float:left;
+  width:278px;}
+
+.clear{clear:both;}
