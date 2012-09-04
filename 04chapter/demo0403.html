@@ -5,14 +5,25 @@
 
 <head>
   <title>Column groups</title>
+  <style>
+  	.colgroup_red{background-color:grey;efefef;font-weight:bold;}
+	.colgroup_yellow{background-color:yellow;efefef;font-weight:bold;}
+	.col{background-color:blue;efefef;font-weight:bold;}
+  </style>
 </head>
 
 <body>
 
 <table border="1">
-  <colgroup span="10">
+  <colgroup span="4" class="colgroup_red" />
+  <colgroup span="6">
+  	<col span="3" class="colgroup_yellow">
+  	<col span="2" class="col">
+  </colgroup>
+  <!--
     <col span="9" width="100" id="mainColumns" />
     <col span="1" width="200" id="totalColumn" />
+    -->
   </colgroup>
   <tr>
     <td>1</td>
@@ -51,7 +62,7 @@
     <td>10</td>
   </tr>
   <tr>
-    <td>1</td>
+    <td rowspan="2">1</td>
     <td>2</td>
     <td>3</td>
     <td>4</td>
@@ -63,11 +74,8 @@
     <td>10</td>
   </tr>
   <tr>
-    <td>1</td>
     <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
+    <td colspan="3">3</td>
     <td>6</td>
     <td>7</td>
     <td>8</td>

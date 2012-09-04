@@ -5,11 +5,13 @@
 
 <head>
   <title>Using the &lt;th&gt; element for table headings</title>
+  <style type="text/css">
+  	th{color:red;background-color:yellow;}
+  </style>
 </head>
 
 <body>
-<table border="1">
-
+<table border="1" dir="rtl" align="left">
   <tr>
     <th></th>
     <th>Outgoings ($)</th>
@@ -17,33 +19,35 @@
     <th>Profit ($)</th>
   </tr>
 
-  <tr>
+  <tr align=".">
     <th>Quarter 1 (Jan-Mar)</th>
     <td>11200.00</td>
     <td>21800.00</td>
     <td><b>10600.00</b></td>
   </tr>
 
-  <tr>
+  <tr align="." bgcolor="gray">
     <th>Quarter 2 (Apr-Jun)</th>
     <td>11700.00</td>
     <td>22500.00</td>
     <td><b>10800.00</b></td>
   </tr>
 
-  <tr>
+  <tr align="." >
     <th>Quarter 3 (Jul - Sep)</th>
-    <td>11650.00</td>
+    <td>11650.001</td>
     <td>22100.00</td>
-    <td><b>10450.00</b></td>
+    <td><em><b>10450.00</b></em></td>
   </tr>
 
-  <tr>
+  <tr align="." bgcolor="gray">
     <th>Quarter 4 (Oct - Dec)</th>
     <td>11850.00</td>
     <td>22900.00</td>
     <td><b>11050.00</b></td>
   </tr>
 </table>
+<br clear="left" />
+User agents may ignore leading and trailing white space in CDATA attribute values (e.g., "   myval   " may be interpreted as "myval"). Authors should not declare attribute values with leading or trailing white space.
 </body>
 </html>
