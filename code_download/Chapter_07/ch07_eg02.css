@@ -6,6 +6,6 @@ body {
    font-family:arial, verdana, sans-serif; }
 
 p.one {font-family:arial, verdana, sans-serif;}
-p.two {font-family:times, times new roman, serif;}
-p.three {font-family:courier, courier new, serif;}
+p.two {font-family:times, "times new roman", serif;}
+p.three {font-family:courier, "courier new", serif;}
 
