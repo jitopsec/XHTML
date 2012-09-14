@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <title>jquery base</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <style type="text/css">
+  	a.test{font-weight:bold;}
+  </style>
+</head>
+<body>
+	<a href="http://jquery.com/">jquery</a>
+	<ul>
+		<li value="1">one</li>
+		<li value="2">two</li>
+		<li value="3">three</li>
+	</ul>
+	<button id="go">&raquo; Run</button>
+	<div id="block">Hello!</div>
+	<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('a').click(function(event){
+			event.preventDefault();
+			$(this).hide();
+
+			$("ul li").show();
+		});
+
+		$("ul li").click(function(event){
+			$(this).hide();
+		});	
+		
+
+		$('a').addClass("test");
+/*
+		$("#go").click(function(){
+			$("#block").animate(
+				{width: "70%",opacity: 0.4,marginLeft: "0.6in",fontSize: "3em",borderWidth: "10px"  },
+				1000);
+			}
+		);
+		*/
+		
+		$("#go").click(function(){
+			$("#block").animate(
+				{width:70%,opacity:0.4},
+				1000);
+			}
+		);
+	});	
+	</script>
+
+
+<html>
